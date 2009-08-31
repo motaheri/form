@@ -11,6 +11,9 @@ a {
 a:hover {
 	text-decoration:underline;
 }
+img {
+	border: 0pt;
+}
 h1 {
 	color: #333333;
 	padding: 0;
@@ -42,12 +45,14 @@ h1 a {
 }
 .header h2 {
 	color:#BBBBBB;
-	font-size:16px;
+	font-size:20px;
 	font-weight:100;
 	letter-spacing:-1px;
 	line-height:22px;
-	text-align:center;
-	margin-right:55px;
+	text-align:justified;
+	masrgian-right:55px;
+	margin: auto;
+	width:550px;
 }
 div#content {
 	width: 550px;
