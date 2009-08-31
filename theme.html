@@ -1,142 +1,154 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
+	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <title>{Title}</title>
-    <link rel="icon" href="{Favicon}"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
-    <meta name="viewport" content="width=600"/> <!-- iPhone -->
-    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
-	<link rel="stylesheet" href="http://github.com/motaheri/form/raw/master/css/theme.css" type="text/css" />
+        <title>{Title}</title>
+        <link rel="icon" href="{Favicon}"/>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+        <meta name="viewport" content="width=600"/> <!-- iPhone -->
+        {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+        <link rel="stylesheet" href="http://github.com/motaheri/form/raw/master/css/theme.css" type="text/css" />
         <style type="text/css">
             {CustomCSS}
+			#sidebar {visibility:hidden};
         </style>
-    </head>
-    <body>
-
-<div id="nav"></div>
-
-        <div class="header">
+	</head>
+<body>
+	<div id="nav"></div>
+	<div class="header">
         <h1><a href="/"><img 
         src="http://github.com/motaheri/form/raw/master/img/littlecollages.png" 
         height="93" width="454" /></a></h1>
-          <h2>{Description}</h2>
-      </div>
         
-        <div id="content">
+		<h2>{Description}</h2>
+	</div>
+        
+	<div id="content">
 
-<div id="sidebar">
-                 <div id="search">
-                    <form method="get" action="/search">
-                    <input type="text" value="{SearchQuery}" name="q"/>
-                    </form>
-                 </div>
+	<div id="sidebar">
+		<div id="search">
+			<form method="get" action="/search">
+			<input type="text" value="{SearchQuery}" name="q"/>
+			</form>
+		</div>
                    
-               <div id="sidebar1">
-    <a href="/"><div id="home"></div></a>
-    <a href="/random"><div id="random"></div></a>
-    <a href="/archive"><div id="archive"></div></a>
-    <a href="{RSS}"><div id="rss"></div></a>
+		<div id="sidebar1">
+			<a href="/"><div id="home"></div></a>
+			<a href="/random"><div id="random"></div></a>
+			<a href="/archive"><div id="archive"></div></a>
+			<a href="{RSS}"><div id="rss"></div></a>
     
- <!-- To use the socail networks on the sidebar simply remove the comment arrows surrounding which ever one you wish to use and insert the link to your page between the empty quotes ie: <a href="your link"><div id="social network"></div></a> -->   
-<!--     <a href=""><div id="facebook"></div></a>     -->
-<!--     <a href=""><div id="flickr"></div></a>       -->
-</div> 
-            </div>
+             <!-- To use the socail networks on the sidebar simply remove the comment
+             arrows surrounding which ever one you wish to use and insert the link to
+             your page between the empty quotes ie: <a href="your link"><div id="social
+             network"></div></a> -->   
+            <!--     <a href=""><div id="facebook"></div></a>     -->
+            <!--     <a href=""><div id="flickr"></div></a>       -->
+		</div> 
+	</div>
        
-            {block:Posts}
-                <div class="post">
+	{block:Posts}
+		<div class="post">
+            {block:Regular}
+                
+                <div class="regular">
+                <a href="{Permalink}"><img 
+                src="http://static.tumblr.com/xequfu2/t8fkl9b47/text.png"
+                class="permalink" alt="permalink"/></a>
+    
+                {block:Title}<h2><a href="{Permalink}"><img 
+                src="http://github.com/motaheri/form/raw/master/img/lcheader.png" 
+                height="96" width="536" /></a></h2>{/block:Title}
+            
+            {Body}
+		</div>
+			{/block:Regular}
+	{block:Photo}
+		<div class="photo">
+		<a href="{Permalink}"><img 
+        src="http://static.tumblr.com/xequfu2/Vgrkl9b2g/photo.png"
+		class="permalink" alt="permalink"/></a>
+		{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+			{block:Caption}
+				<div class="caption">{Caption}</div>
+			{/block:Caption}
+		</div>
+	{/block:Photo}
                     
+	{block:Quote}
+		<div class="quote">
+            <a href="{Permalink}"><img 
+            src="http://static.tumblr.com/xequfu2/Hhukl9b3e/quote.png"
+            class="permalink" alt="permalink"/></a>
+            <div class="quote_text"><span class="{Length}">{Quote}</span></div>
+            {block:Source}
+                <div class="source">&mdash; {Source}</div>
+            {/block:Source}
+		</div>
+	{/block:Quote}
                     
+	{block:Link}
+		<div class="link">
+            <a href="{Permalink}"><img 
+            src="http://static.tumblr.com/xequfu2/GKrkl9b19/link.png"
+            class="permalink" alt="permalink"/></a>
+            <a href="{URL}" class="link" {Target}>{Name}</a>
+                {block:Description}
+                    <span class="description">{Description}</span>
+                {/block:Description}
+		</div>
+	{/block:Link}
                     
-                    {block:Regular}
-                        <div class="regular">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/t8fkl9b47/text.png"
-                    class="permalink" alt="permalink"/></a>
-                            {block:Title}<h2><a href="{Permalink}"><img src="http://github.com/motaheri/form/raw/master/img/littlecollages.png" height="93" width="454" /></a></h2>{/block:Title}
-                            {Body}
-                        </div>
-                    {/block:Regular}
+	{block:Conversation}
+		<div class="conversation">
+            <a href="{Permalink}"><img 
+            src="http://static.tumblr.com/xequfu2/oG5kl9azi/chat.png"
+            class="permalink" alt="permalink"/></a>
+                {block:Title}
+                    <h2><a href="{Permalink}">{Title}</a></h2>
+                {/block:Title}
+                <ul>
+                    {block:Lines}
+                        <li class="{Alt}">
+                            {block:Label}
+                                <span class="label user_{UserNumber}">{Label}</span>
+                            {/block:Label}
+                        {Line}
+                        </li>
+                    {/block:Lines}
+                </ul>
+		</div>
+	{/block:Conversation}
                     
-                    {block:Photo}
-                        <div class="photo">
-                          <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/Vgrkl9b2g/photo.png"
-                    class="permalink" alt="permalink"/></a>
+	{block:Audio}
+		<div class="audio">
+			<a href="{Permalink}"><img 
+            src="http://static.tumblr.com/xequfu2/PVikl9axc/audio.png"
+			class="permalink" alt="permalink"/></a>
+		{AudioPlayerBlack}
+			{block:Caption}
+				<div class="caption">{Caption}</div>
+			{/block:Caption}
+		</div>
+	{/block:Audio}
+                    
+	{block:Video}
+		<div class="video">
+		<a href="{Permalink}"><img 
+        src="http://static.tumblr.com/xequfu2/P8Skl9b4x/video.png"
+		class="permalink" alt="permalink"/></a>
+			{Video-500}
+				{block:Caption}
+					<div class="caption">{Caption}</div>
+				{/block:Caption}
+		</div>
+	{/block:Video}
 
-                            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                        </div>
-                    {/block:Photo}
-                    
-                    {block:Quote}
-                        <div class="quote">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/Hhukl9b3e/quote.png"
-                    class="permalink" alt="permalink"/></a>
-                            <div class="quote_text"><span class="{Length}">{Quote}</span></div>
-                            {block:Source}
-                                <div class="source">&mdash; {Source}</div>
-                            {/block:Source}
-                        </div>
-                    {/block:Quote}
-                    
-                    {block:Link}
-                        <div class="link">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/GKrkl9b19/link.png"
-                    class="permalink" alt="permalink"/></a>
-                            <a href="{URL}" class="link" {Target}>{Name}</a>
-                            {block:Description}
-                                <span class="description">{Description}</span>
-                            {/block:Description}
-                        </div>
-                    {/block:Link}
-                    
-                    {block:Conversation}
-                        <div class="conversation">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/oG5kl9azi/chat.png"
-                    class="permalink" alt="permalink"/></a>
-                            {block:Title}
-                                <h2><a href="{Permalink}">{Title}</a></h2>
-                            {/block:Title}
-                            <ul>
-                                {block:Lines}
-                                    <li class="{Alt}">
-                                        {block:Label}
-                                            <span class="label user_{UserNumber}">{Label}</span>
-                                        {/block:Label}
-                                        {Line}
-                                    </li>
-                                {/block:Lines}
-                            </ul>
-                        </div>
-                    {/block:Conversation}
-                    
-                    {block:Audio}
-                        <div class="audio">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/PVikl9axc/audio.png"
-                    class="permalink" alt="permalink"/></a>
-                            {AudioPlayerBlack}
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                        </div>
-                    {/block:Audio}
-                    
-                    {block:Video}
-                        <div class="video">
- <a href="{Permalink}"><img src="http://static.tumblr.com/xequfu2/P8Skl9b4x/video.png"
-                    class="permalink" alt="permalink"/></a>
-                            {Video-500}
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                        </div>
-                    {/block:Video}
-
-            <div class="datetime">
-            Posted <a href="{Permalink}" class="permalink">{Month} {DayOfMonth}, {Year} at {12Hour}:{Minutes}{AmPm}</a> {block:HasTags}in {block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}
+	<div class="datetime">
+		Posted <a href="{Permalink}" 
+        class="permalink">{Month} {DayOfMonth}, {Year} at {12Hour}:{Minutes}{AmPm}</a> {block:HasTags}in {block:Tags}<a 
+        href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}
             {block:Pagination}
             {block:NoteCount} | 
             <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount} <br />
@@ -148,26 +160,29 @@
             {block:PermalinkPage} || 
             <a href="/">home</a><br />
             {/block:PermalinkPage}
-          </div>
+	</div>
 
-                </div>
-            {postnotes}
-            {/block:Posts}
+</div>
+
+	{postnotes}
+{/block:Posts}
 
             <div id="footer">
                 {block:PreviousPage}
                     <a href="{PreviousPage}">&#171; Previous</a> &nbsp;&nbsp;
                 {/block:PreviousPage}
-                
+                        
                 {block:NextPage}
                     <a href="{NextPage}" font-size="36px">Next &#187;</a>
                 {/block:NextPage}
-                
+                        
                 <div id="credit">
-                    Powered by <a href="http://www.tumblr.com/"
-                    target="_blank">Tumblr</a>
-                    Designed by:<a href="http://www.doinwork.tumblr.com/"
-                    target="_blank">Doinwork</a> 
+                    <!--
+                        Powered by <a href="http://www.tumblr.com/"
+                        target="_blank">Tumblr</a>
+                        Designed by:<a href="http://www.doinwork.tumblr.com/"
+                        target="_blank">Doinwork</a> 
+                    -->
                 </div>
             </div>
         </div>
