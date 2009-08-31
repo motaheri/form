@@ -11,15 +11,15 @@
         <link rel="stylesheet" href="http://github.com/motaheri/form/raw/master/css/theme.css" type="text/css" />
         <style type="text/css">
             {CustomCSS}
-			#sidebar {visibility:hidden};
+			#sidebar {visibility:};
         </style>
 	</head>
 <body>
 	<div id="nav"></div>
 	<div class="header">
         <h1><a href="/"><img 
-        src="http://github.com/motaheri/form/raw/master/img/littlecollages.png" 
-        height="93" width="454" /></a></h1>
+        src="http://github.com/motaheri/form/raw/master/img/lcheader.png" 
+        height="96" width="536" /></a></h1>
         
 		<h2>{Description}</h2>
 	</div>
@@ -57,9 +57,7 @@
                 src="http://static.tumblr.com/xequfu2/t8fkl9b47/text.png"
                 class="permalink" alt="permalink"/></a>
     
-                {block:Title}<h2><a href="{Permalink}"><img 
-                src="http://github.com/motaheri/form/raw/master/img/lcheader.png" 
-                height="96" width="536" /></a></h2>{/block:Title}
+                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
             
             {Body}
 		</div>

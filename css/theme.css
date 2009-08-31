@@ -6,9 +6,10 @@
 	background-position: bottom right;
 	background-color: #fff;
 	font-family: 'Helvetica, Ariel', sans-serif;
+	color: #111;
 }
 a {
-	color: #444;
+	color: #FECD10;
 	text-decoration: none;
 }
 a:hover {
