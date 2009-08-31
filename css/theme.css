@@ -1,15 +1,11 @@
-@charset "utf-8";
-/* CSS Document */
-
- body {
+body {
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-color: #fff;
 	font-family: 'Helvetica, Ariel', sans-serif;
-	color: #111;
 }
 a {
-	color: #FECD10;
+	color: #FCB310;
 	text-decoration: none;
 }
 a:hover {
@@ -23,7 +19,7 @@ h1 {
 	margin-bottom: -15px;
 }
 h1 a {
-	color: #fff;
+	color: #333333;
 	text-decoration: none;
 }
 .header {
@@ -45,7 +41,7 @@ h1 a {
 	text-decoration: none;
 }
 .header h2 {
-	color:#444;
+	color:#BBBBBB;
 	font-size:16px;
 	font-weight:100;
 	letter-spacing:-1px;
@@ -68,10 +64,10 @@ div#content div#sidebar {
 div#sidebar {
 	font: Normal 20px Helvetica, sans-serif;
 	line-height: 20px;
-	color: #444;
+	color: #BBBBBB;
 }
 div#sidebar a {
-	color: #444;
+	color: #BBBBBB;
 	border:none;
 }
 div.post {
@@ -114,13 +110,13 @@ div.post:hover img.permalink {
 }
 div.post h2 {
 	font-size: 26px;
-	color: #666;
+	color: #FCB310;
 	letter-spacing: -1px;
 	margin: 0px 0px 5px 0px;
 	text-decoration: none;
 }
 div.post h2 a {
-	color: #666;
+	color: #FCB310;
 	text-decoration: none;
 	font-family: Helvetica Neue, sans-serif;
 	font-weight: 100;
@@ -128,19 +124,19 @@ div.post h2 a {
 div.post div.caption {
 	font-size: 16px;
 	font-weight: bold;
-	color: #c00;
+	color: #444;
 	margin-top: 10px;
 	padding: 0px 20px 0px 20px;
 	text-decoration: none;
 	border:none;
 }
 div.post div.caption a {
-	color:#444;
+	color:#FCB310;
 	text-decoration: none;
 	border:none;
 }
 div.post div.caption a:hover {
-	color:#444;
+	color:#FCB310;
 	text-decoration: underline;
 	border:none;
 }
@@ -149,20 +145,20 @@ div.post div.caption a:hover {
                 div.post div.regular {
 	font-size: 12px;
 	font-weight: 100;
-	color: #c00;
+	color: #444;
 	line-height: 20px;
 	text-decoration: none;
 }
 div.post div.regular a {
-	color:#444;
+	color:#FCB310;
 }
 div.post div.regular a:hover {
-	color:#444;
+	color:#FCB310;
 	text-decoration: underline;
 }
 div.post div.regular blockquote {
 	font-style: italic;
-	border-left: solid 2px #c00;
+	border-left: solid 2px #444;
 	padding-left: 10px;
 }
 /* Photo Post */
@@ -179,8 +175,8 @@ div.post div.photo div.caption {
                 div.post div.quote div.quote_text {
 	font-family: Helvetica, sans-serif;
 	font-weight: bold;
-	color: #c00;
-	border-left: solid 2px #666;
+	color: #888;
+	border-left: solid 2px #FCB310;
 	padding-left: 10px;
 }
 div.post div.quote div.quote_text span.short {
@@ -198,30 +194,30 @@ div.post div.quote div.quote_text span.long {
 	line-height: 20px;
 }
 div.post div.quote div.quote_text a {
-	color: #c00;
+	color: #888;
 }
 div.post div.quote div.source {
 	font-size: 20px;
 	font-weight: Bold;
-	color: #444;
+	color: #555;
 	margin-top: 5px;
 }
 div.post div.quote div.source a {
-	color: #444;
+	color: #555;
 }
 /* Link Post */
             
                 div.post div.link a.link {
 	font: Bold 26px Helvetica, sans-serif;
 	letter-spacing: -1px;
-	color: #c00;
+	color: #FCB310;
 	text-decoration: none;
 }
 div.post div.link span.description {
 	font-size: 13px;
 	font-weight: normal;
 	letter-spacing: -1px;
-	color: #c00;
+	color: #444;
 	text-decoration: none;
 }
 /* Conversation Post */
@@ -230,12 +226,12 @@ div.post div.link span.description {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px 0px 0px 1px;
-	border-left: solid 5px #444;
+	border-left: solid 5px #bbb;
 }
 div.post div.conversation ul li {
 	font-size: 12px;
 	padding: 4px 10px 4px 8px;
-	color: #111;
+	color: #444;
 	margin-bottom: 1px;
 }
 div.post div.conversation ul li span.label {
@@ -251,15 +247,15 @@ div.post div.conversation ul li span.user_3 {
 	color: #0a0;
 }
 div.post div.conversation ul li.odd {
-	background-color: #f8f8f8;
+	background-color: #f4f4f4;
 }
 div.post div.conversation ul li.even {
-	background-color: #ddd;
+	background-color: #d6d6d6;
 }
 /* Audio Post */
 
                        div.post.div.audio {
-	background-color:#eee;
+	background-color:#333333;
 }
 /* Video Post */
             
@@ -409,16 +405,16 @@ div#footer {
 	text-align: center;
 	font-size: 15px;
 	font-weight: 100;
-	color: #444;
+	color: #BBBBBB;
 }
 div#footer a {
 	text-decoration: none;
 	font-size: 24px;
-	color: #444;
+	color: #BBBBBB;
 }
 div#footer a:hover {
 	text-decoration: underline;
-	color: #fff;
+	color: #333333;
 }
 div#credit {
 	font: Normal 13px Helvetica, serif;
@@ -428,5 +424,5 @@ div#credit {
 div#credit a {
 	text-decoration: none;
 	font-size: 13px;
-	color: #444;
+	color: #FCB310;
 }
